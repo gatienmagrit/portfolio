@@ -124,7 +124,7 @@ header nav {
     }
   }
 
-@media all and (max-width: 1920px) {
+@media all and (max-width: 2500px) {
 
     .toggle{
         display: inline-block;
