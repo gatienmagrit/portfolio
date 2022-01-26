@@ -1,0 +1,204 @@
+*,::after,::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.toggle{
+    display: none;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    background: #242424;
+    z-index: 5;
+}
+
+header nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f1f1f1;
+    padding: 0 1.5rem;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo i{
+    margin-right: 2px;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    list-style-type: none;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+.programming{
+    height: 100vh;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.programming img{
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+    filter: blur(2px);
+}
+
+.menu_pres{
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_pres p{
+    font-size: 24px;
+    animation: dropdown 1s ease-out forwards;
+}
+
+.menu_pres q{
+    font-size: 24px;
+    animation: fade 2s ease-out forwards;
+}
+
+.menu_pres h1{
+    font-size: 72px;
+    animation: dropdown 1s ease-out forwards;
+}
+
+@keyframes dropdown {
+    from {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-50px);
+    }
+    to { 
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+    }
+    to { 
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+@media all and (max-width: 1380px) {
+
+    .toggle{
+        display: inline-block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 101;
+    }
+
+    .header{
+        background-color: transparent;
+    }
+
+    .logo{
+        position: relative;
+        z-index:101;
+    }
+
+    .ouvrir {
+        display: block;
+    }
+
+    .fermer{
+        display: none;
+    }
+
+    .open .ouvrir{
+        display: none;
+    }
+
+    .open .fermer{
+        display: block;
+        z-index: 101;
+    }
+
+    .menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 100;
+        background-color: rgba(36,36,36, 0.95);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: transform 1s;
+    }
+
+    .open .menu{
+        transform: translateX(0);
+    }
+
+    .menu li{
+        margin: 15px 0;
+        font-size: 2rem;
+    }
+}
+
+.icons-social-menu{
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+.clikable{
+    text-decoration: none;
+    color: #f1f1f1;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+.clikable i{
+    cursor: pointer;
+}
