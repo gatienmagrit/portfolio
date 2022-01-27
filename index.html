@@ -8,8 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="js/app.js" defer></script>
 </head>
-<body>
+<body class="scroll">
     <header>
         <nav>
             <div class="logo">
@@ -21,12 +22,11 @@
                 <i class="fas fa-times fermer"></i>
             </div>
             <ul class="menu">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Présentation</a></li>
-                <li><a href="#">Parcours</a></li>
-                <li><a href="#">Compétences</a></li>
-                <li><a href="#">Hobbies</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="close"><a href="#presentation">Présentation</a></li>
+                <li class="close"><a href="#parcours">Parcours</a></li>
+                <li class="close"><a href="#skills">Compétences</a></li>
+                <li class="close"><a href="#hobbies">Hobbies</a></li>
+                <li class="close"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -38,12 +38,33 @@
             <q>Un étudiant en informatique, tout simplement</q>
         </div>
         <div class="icons-social-menu">
-            <a href="#" class="clikable"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="clikable"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="clikable"><i class="fab fa-google"></i></a>
-            <a href="#" class="clikable"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/gatien-magrit-018848197/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/gatienmagrit"><i class="fab fa-github"></i></a>
+        </div>
+
+    </section>
+    <section class="about-me-section" id="presentation">
+        <div class="about-me">
+            <span>
+                <img src="images/profil.jpg" alt="Tête de gatien magrit">
+            </span>
+            <div class="about-me-pres">
+                <h1>Présentation</h1>
+                <p>
+                    Je m'appelle Gatien MAGRIT, j'ai 20 ans et je suis en DUT informatique !
+                </p>
+                <ul>
+                    <li>Motivé</li>
+                    <li>Motivé</li>
+                    <li>Motivé</li>
+                    <li>Motivé</li>
+                </ul>
+                <div class="about-me-button">
+                    <button class="bg-trans">Télécharger CV</button>
+                    <button>Contactez moi</button>
+                </div>
+            </div>
         </div>
     </section>
-    <script src="js/app.js" defer></script>
 </body>
 </html>
