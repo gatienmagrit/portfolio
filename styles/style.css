@@ -4,12 +4,25 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-weight: 300;
+    font-size: 18px;
     background-color: #f1f1f1;
     overflow-x: hidden;
+}
+
+h2,h3,h4,h5,h6,button{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+h1{
+    font-family: 'Prompt', sans-serif;
 }
 
 .toggle{
@@ -40,16 +53,17 @@ header nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 500;
 }
 .logo i{
-    margin-right: 2px;
+    margin-right: 5px;
 }
 
 .menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 500px;
+    width: 600px;
     list-style-type: none;
 }
 
@@ -77,6 +91,14 @@ header nav {
     z-index: -1;
     position: absolute;
     filter: blur(2px);
+}
+
+.programming h4{
+    font-size: 1.5rem;
+}
+
+.programming h1{
+    font-size: 997rem;
 }
 
 .menu_pres{
@@ -221,6 +243,7 @@ header nav {
 
 .about-me-section{
     width: 100%;
+    height: 80vh;
     border-top: #242424 .8vh solid;
     margin-top: -5px;
 }
@@ -229,21 +252,19 @@ header nav {
     width: 60%;
     height: 80vh;
     background-color: #f1f1f1;
-    margin-top: -2px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .about-me span{
-    width: 80vw;
-    height: 300px;
+    height: 400px;
     padding-right: 25px;
 }
 
 .about-me span img{
-    width: 100%;
+    height: 100%;
     /* border-radius: 50%; */
 }
 
@@ -253,19 +274,44 @@ header nav {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 300px;
+    height: 400px;
 }
 
-.about-me-button button{
-    width: 120px;
-    height: 40px;
-    border-radius: 25px;
-    background-color: #f1f1f1;
-    border: #242424 2px solid;
+.about-me-button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.bg-trans{
-    background-color: #242424;
+.buttoncv{
+    padding: 20px 35px;
+    cursor: pointer;
     border: #242424 2px solid;
+    background: #242424;
     color: #f1f1f1;
+    position: relative;
+    transition: all .2s;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0px -0px 0px 0px #242424, 0px 0px 0px 0px #3f3f3f;
+    font-size: 1rem;
+    width: 200px;
+    height: 60px;
+    
 }
+
+.buttoncv::after{
+    content: "";
+    background: linear-gradient(225deg,#242424,#3f3f3f);
+    z-index: -1;
+    transition: all .5s;
+}
+
+.buttoncv:hover {
+    transform: translate(0,-6px);
+    box-shadow: 5px -5px 20px 0px #242424, -5px 5px 20px 0px #3f3f3f;
+}
+
+
+
