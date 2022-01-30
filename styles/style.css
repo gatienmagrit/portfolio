@@ -16,9 +16,14 @@ body{
     overflow-x: hidden;
 }
 
-h2,h3,h4,h5,h6,button{
+h4,h5,h6{
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+}
+
+h2,h3,button{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 h1{
@@ -37,6 +42,7 @@ header{
     height: 8vh;
     background: #242424;
     z-index: 5;
+    border-bottom: #fcb667 3px solid;
 }
 
 header nav {
@@ -93,14 +99,6 @@ header nav {
     filter: blur(2px);
 }
 
-.programming h4{
-    font-size: 1.5rem;
-}
-
-.programming h1{
-    font-size: 997rem;
-}
-
 .menu_pres{
     color: #f1f1f1;
     display: flex;
@@ -109,26 +107,32 @@ header nav {
     align-items: center;
 }
 
-.menu_pres p{
-    font-size: 24px;
-    animation: dropdown 1s ease-out forwards;
-}
-
-.menu_pres q{
-    font-size: 24px;
-    animation: fade 2s ease-out forwards;
+.menu_pres h4{
+    font-size: 2rem;
 }
 
 .menu_pres h1{
-    font-size: 72px;
+    font-size: 7rem;  
+}
+
+#anim1{
+    animation: dropdown 0.7s ease-out forwards;
+}
+
+#anim2{
     animation: dropdown 1s ease-out forwards;
+}
+
+#anim3{
+    
+    animation: dropdown 1.3s ease-out forwards;
 }
 
 @keyframes dropdown {
     from {
       opacity: 0;
       visibility: hidden;
-      transform: translateY(-50px);
+      transform: translateY(-35px);
     }
     to { 
       opacity: 1;
@@ -246,12 +250,15 @@ header nav {
     height: 80vh;
     border-top: #242424 .8vh solid;
     margin-top: -5px;
+    background-image: url(../images/fond-pres.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .about-me{
-    width: 60%;
+    width: 65%;
     height: 80vh;
-    background-color: #f1f1f1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -259,7 +266,7 @@ header nav {
 }
 
 .about-me span{
-    height: 400px;
+    height: 500px;
     padding-right: 25px;
 }
 
@@ -272,45 +279,73 @@ header nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
-    height: 400px;
+    height: 500px;
+}
+
+.about-me-pres h2{
+    font-size: 3rem;
+    color: #181818;
+    
+}
+
+.about-me-pres p{
+    font-size: 1.3rem;
+    color: #181818;
+    text-align: justify;
+    width: 70%;
+}
+
+.about-me ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+}
+
+.about-me ul li{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #242424;
+    margin: 0 25px;
 }
 
 .about-me-button{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .buttoncv{
     padding: 20px 35px;
     cursor: pointer;
-    border: #242424 2px solid;
-    background: #242424;
+    background: linear-gradient(345deg, #d8816f,#fcb667);
+    border: 0;
     color: #f1f1f1;
     position: relative;
-    transition: all .2s;
+    transition: all .1s;
     overflow: hidden;
     border-radius: 30px;
-    box-shadow: 0px -0px 0px 0px #242424, 0px 0px 0px 0px #3f3f3f;
+    box-shadow: 0px -0px 0px 0px #d8816f, 0px 0px 0px 0px #fcb667;
     font-size: 1rem;
-    width: 200px;
-    height: 60px;
-    
+    width: 210px;
+    height: 65px;
 }
 
 .buttoncv::after{
     content: "";
-    background: linear-gradient(225deg,#242424,#3f3f3f);
+    background: linear-gradient(225deg,#d8816f,#fcb667);
     z-index: -1;
     transition: all .5s;
+    
 }
 
 .buttoncv:hover {
     transform: translate(0,-6px);
-    box-shadow: 5px -5px 20px 0px #242424, -5px 5px 20px 0px #3f3f3f;
+    box-shadow: 5px -5px 20px 0px #d8816f, -5px 5px 20px 0px #fcb667;
 }
 
 
