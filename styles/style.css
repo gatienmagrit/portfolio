@@ -96,7 +96,6 @@ header nav {
     height: 100vh;
     z-index: -1;
     position: absolute;
-    filter: blur(2px);
 }
 
 .menu_pres{
@@ -247,9 +246,7 @@ header nav {
 
 .about-me-section{
     width: 100%;
-    height: 80vh;
-    border-top: #242424 .8vh solid;
-    margin-top: -5px;
+    height: 100vh;
     background-image: url(../images/fond-pres.png);
     background-position: center;
     background-size: 100% 100%;
@@ -258,7 +255,7 @@ header nav {
 
 .about-me{
     width: 65%;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
