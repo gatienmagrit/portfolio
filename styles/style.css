@@ -30,6 +30,11 @@ h1{
     font-family: 'Prompt', sans-serif;
 }
 
+
+/* ---------------------------------------- HEADER -- */
+
+
+
 .toggle{
     display: none;
 }
@@ -64,6 +69,11 @@ header nav {
 .logo i{
     margin-right: 5px;
 }
+
+
+/* ----------------------------------------- PAGE MENU -- */
+
+
 
 .menu{
     display: flex;
@@ -153,6 +163,309 @@ header nav {
     }
   }
 
+.icons-social-menu{
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons-social-menu a{
+    margin: 0 .5em;
+    color: #f1f1f1;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* ---------------------------------------- ABOUT ME -- */
+
+.about-me-section{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/fond-pres.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.about-me{
+    width: 65%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.about-me span{
+    width: 30vw;
+    padding-right: 25px;
+}
+
+.about-me span img{
+    width: 100%;
+    /* border-radius: 50%; */
+}
+
+.about-me-pres{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 30vw;
+    height: 500px;
+}
+
+.about-me-pres h2{
+    font-size: 3rem;
+    color: #181818;
+    
+}
+
+.about-me-pres p{
+    font-size: 1.3rem;
+    color: #181818;
+    text-align: left;
+    width: 100%;
+}
+
+.about-me ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+}
+
+.about-me ul li{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #242424;
+    margin: 0 25px;
+}
+
+.about-me-button{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.buttoncv{
+    padding: 20px 35px;
+    cursor: pointer;
+    background: linear-gradient(345deg, #d8816f,#fcb667);
+    border: 0;
+    color: #f1f1f1;
+    position: relative;
+    transition: all .1s;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0px -0px 0px 0px #d8816f, 0px 0px 0px 0px #fcb667;
+    font-size: 1rem;
+    width: 210px;
+    height: 65px;
+}
+
+.buttoncv::after{
+    content: "";
+    background: linear-gradient(225deg,#d8816f,#fcb667);
+    z-index: -1;
+    transition: all .5s;
+    
+}
+
+.buttoncv:hover {
+    transform: translate(0,-6px);
+    box-shadow: 5px -5px 20px 0px #d8816f, -5px 5px 20px 0px #fcb667;
+}
+
+
+/* ------------------------------------------------ PARCOURS -- */
+
+
+.parcours-section{
+    width: 100%;
+    height: 100vh;
+    background: #242424;
+}
+
+.parcours{
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+    padding: 80px 0 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.parcours h1{
+    font-size: 3rem;
+    color: #f1f1f1;
+    flex: 1;
+}
+
+.grid_parcours{
+    display: grid;
+    flex: 6;
+    grid-template-areas:"a b";
+    gap: 50px;
+    align-items: center;
+}
+
+.grid_parcours_case1{
+    width: 35vw;
+    height: 45vh;
+    grid-area: a;
+    border-radius: 5px;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+
+.case1_img{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bac.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(0);
+    transition: transform 1s;
+}
+
+.case1_img h1{
+    color: #f1f1f1;
+    text-align: center;
+    opacity: .9;
+}
+
+.case1_blanc{
+    width: 35vw;
+    height: 45vh;
+    position: absolute;
+    top: 0;
+    transform: translateX(100%);
+    background: #f1f1f1;
+    transition: transform 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.case1_blanc h3{
+    color: black;
+}
+
+.case1_blanc p{
+    color: black;
+}
+
+.hover1 .case1_blanc{
+    transform: translateX(0);
+}
+
+.hover1 .case1_img{
+    transform: translateX(-100%);
+}
+
+.grid_parcours_case2{
+    background: #f1f1f1;
+    width: 35vw;
+    height: 45vh;
+    grid-area: b;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.case2_img{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/dut.jpg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(0);
+    transition: transform 1s;
+}
+
+.case2_img h1{
+    color: #f1f1f1;
+    text-align: center;
+    opacity: .9;
+}
+
+.case2_blanc{
+    width: 35vw;
+    height: 45vh;
+    position: absolute;
+    top: 0;
+    transform: translateX(100%);
+    background: #f1f1f1;
+    transition: transform 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.case2_blanc h3{
+    color: black;
+}
+
+.case2_blanc p{
+    color: black;
+}
+
+.hover2 .case2_blanc{
+    transform: translateX(0);
+}
+
+.hover2 .case2_img{
+    transform: translateX(-100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+//
+// --------------------------- RESPPONSIVE --- //
+//
+*/
+
 @media all and (max-width: 1080px) {
 
     .toggle{
@@ -226,170 +539,27 @@ header nav {
     }
 }
 
-.icons-social-menu{
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media all and (max-width: 1400px) {
+    .buttoncv{
+        padding: 10px 20px;
+        cursor: pointer;
+        background: linear-gradient(345deg, #d8816f,#fcb667);
+        border: 0;
+        color: #f1f1f1;
+        position: relative;
+        transition: all .1s;
+        overflow: hidden;
+        border-radius: 30px;
+        box-shadow: 0px -0px 0px 0px #d8816f, 0px 0px 0px 0px #fcb667;
+        font-size: 1rem;
+        width: 160px;
+        height: 50px;
+        font-size: .9rem;
+    }
+
+    .about-me{
+        flex-wrap: wrap;
+    }
 }
-
-.icons-social-menu a{
-    margin: 0 .5em;
-    color: #f1f1f1;
-    font-size: 1.5rem;
-    text-decoration: none;
-}
-
-/* ================================================ ABOUT ME */
-
-.about-me-section{
-    width: 100%;
-    height: 100vh;
-    background-image: url(../images/fond-pres.png);
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
-
-.about-me{
-    width: 65%;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-}
-
-.about-me span{
-    height: 500px;
-    padding-right: 25px;
-}
-
-.about-me span img{
-    height: 100%;
-    /* border-radius: 50%; */
-}
-
-.about-me-pres{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    height: 500px;
-}
-
-.about-me-pres h2{
-    font-size: 3rem;
-    color: #181818;
-    
-}
-
-.about-me-pres p{
-    font-size: 1.3rem;
-    color: #181818;
-    text-align: justify;
-    width: 70%;
-}
-
-.about-me ul{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    list-style-type: none;
-}
-
-.about-me ul li{
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: #242424;
-    margin: 0 25px;
-}
-
-.about-me-button{
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.buttoncv{
-    padding: 20px 35px;
-    cursor: pointer;
-    background: linear-gradient(345deg, #d8816f,#fcb667);
-    border: 0;
-    color: #f1f1f1;
-    position: relative;
-    transition: all .1s;
-    overflow: hidden;
-    border-radius: 30px;
-    box-shadow: 0px -0px 0px 0px #d8816f, 0px 0px 0px 0px #fcb667;
-    font-size: 1rem;
-    width: 210px;
-    height: 65px;
-}
-
-.buttoncv::after{
-    content: "";
-    background: linear-gradient(225deg,#d8816f,#fcb667);
-    z-index: -1;
-    transition: all .5s;
-    
-}
-
-.buttoncv:hover {
-    transform: translate(0,-6px);
-    box-shadow: 5px -5px 20px 0px #d8816f, -5px 5px 20px 0px #fcb667;
-}
-
-.parcours-section{
-    width: 100%;
-    height: 100vh;
-    background: #242424;
-}
-
-.parcours{
-    width: 80%;
-    height: 100vh;
-    margin: auto;
-    padding: 80px 0 60px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-
-.parcours h1{
-    font-size: 3rem;
-    color: #f1f1f1;
-    flex: 1;
-}
-
-.grid_parcours{
-    display: grid;
-    flex: 6;
-    grid-template-areas:"a b";
-    gap: 50px;
-    align-items: center;
-}
-
-.grid_parcours_case1{
-    background: #f1f1f1;
-    width: 30vw;
-    height: 40vh;
-    grid-area: a;
-}
-
-.grid_parcours_case2{
-    background: #f1f1f1;
-    width: 30vw;
-    height: 40vh;
-    grid-area: b;
-}
-
 
 
