@@ -30,4 +30,4 @@ case2.addEventListener("mouseover", function() {
 
 case2.addEventListener("mouseout", function() {
     body.classList.toggle('hover2');
-})
+});

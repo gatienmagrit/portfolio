@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Montserrat:wght@500&family=Montserrat:wght@700&family=Prompt:wght@700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
     <script src="src/app.js" defer></script>
 </head>
 <body class="scroll">
@@ -22,28 +25,28 @@
                 <i class="fas fa-times fermer"></i>
             </div>
             <ul class="menu">
-                <li class="close"><a href="#presentation">Présentation</a></li>
+                <li class="close"><a href="#presentation-scroll">Présentation</a></li>
                 <li class="close"><a href="#parcours-scroll">Parcours</a></li>
-                <li class="close"><a href="#skills">Compétences</a></li>
+                <li class="close"><a href="#skills-scroll">Compétences</a></li>
                 <li class="close"><a href="#hobbies">Hobbies</a></li>
                 <li class="close"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <section class="programming">
-        <img src="images/programming.png" alt="ordinateur avec du code">
+        <img src="images/programming.png" alt="écran avec du code">
         <div class="menu_pres">
             <h4 id="anim1">Bonjour, je m'appelle</h4>
             <h1 id="anim2">Gatien Magrit.</h1>
             <h4 id="anim3">« Un étudiant en informatique, tout simplement »</h4>
         </div>
         <div class="icons-social-menu">
-                <a href="https://www.linkedin.com/in/gatien-magrit-018848197/"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/gatienmagrit"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/gatien-magrit-018848197/" target="blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/gatienmagrit" target="blank"><i class="fab fa-github"></i></a>
         </div>
 
     </section>
-    <section class="about-me-section" id="presentation">
+    <section class="about-me-section" id="presentation-scroll">
         <div class="about-me scroll">
             <span>
                 <img src="images/profil.png" alt="Tête de gatien magrit">
@@ -54,12 +57,6 @@
                     Je m'appelle Gatien MAGRIT, j'ai 20 ans et je suis en DUT informatique ! <br>Je suis passionné par l'informatique depuis 
                     l'enfance et j'aime développer lors des mes heures perdues.
                 </p>
-                <!-- <ul>
-                    <li>Dynamique</li>
-                    <li>Autonome</li>
-                    <li>Créatif</li>
-                    <li>Curieux</li>
-                </ul> -->
                 <div class="about-me-button">
                     <a href="ressources/CV_MAGRIT_Gatien" download><button class="buttoncv cv">Télécharger CV</button></a>
                     <a href="#contact"><button class="buttoncv">Contactez moi</button></a>
@@ -76,18 +73,10 @@
                         <h1>2017-2019</h1>
                     </div>
                     <div class="case1_blanc">
-                        <h3>
-                            BAC STI2D
-                        </h3>
-                        <p>
-                            J'ai eu mon bac STI2D au lycée Malraux à Béthune en 2019.
-                        </p>
-                        <p>
-                            J'y ai appris les bases de la programmation, l'algorithmie et la logique.
-                        </p>
-                        <p>
-                            J'ai aussi fait quelques projets qui m'on permis de travailler en équipe.
-                        </p>
+                        <h3>BAC STI2D</h3>
+                        <p>J'ai eu mon bac STI2D au lycée Malraux à Béthune en 2019.</p>
+                        <p>J'y ai appris les bases de la programmation, l'algorithmie et la logique.</p>
+                        <p>J'ai aussi fait quelques projets qui m'on permis de travailler en équipe.</p>
                     </div>
                 </div>
                 <div class="grid_parcours_case2">
@@ -95,19 +84,23 @@
                         <h1>2019-2022</h1>
                     </div>
                     <div class="case2_blanc">
-                        <h3>
-                            DUT Informatique
-                        </h3>
-                        <p>
-                            Je suis actuellement en 2ème année de DUT Informatique à Villeneuve d'Ascq.
-                        </p>
-                        <p>
-                            J'y ai appris beaucoup de langages de programmation différents comme le Java, le C et les langages du web(HTML,CSS,JS,JEE).
-                        </p>
-                        <p>
-                            On fait aussi de multiples projets qui developpent nos méthodes de travail, notre organisation et notre travail d'équipe.
-                        </p>
+                        <h3>DUT Informatique</h3>
+                        <p>Je suis actuellement en 2ème année de DUT Informatique à Villeneuve d'Ascq.</p>
+                        <p>J'y ai appris beaucoup de langages de programmation différents comme le Java, le C et les langages du web(HTML,CSS,JS,JEE).</p>
+                        <p>On fait aussi de multiples projets qui developpent nos méthodes de travail, notre organisation et notre travail d'équipe.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="skills-section">
+        <img src="images/fond-skills.png" alt="top-skills-image" class="top-skills-image">
+        <div class="skills" id="skills-scroll">
+            <h1>Mes Compétences</h1>
+            <div class="carousel-skills">
+                <div class="hard-skills">
+                </div>
+                <div class="soft-skills">
                 </div>
             </div>
         </div>

@@ -47,7 +47,6 @@ header{
     height: 8vh;
     background: #242424;
     z-index: 5;
-    border-bottom: #fcb667 3px solid;
 }
 
 header nav {
@@ -80,12 +79,29 @@ header nav {
     justify-content: space-between;
     align-items: center;
     width: 600px;
+    margin-right: 15px;
     list-style-type: none;
 }
 
 .menu li a{
     text-decoration: none;
     color: #f1f1f1;
+    position: relative;
+}
+
+.menu li a::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #fcb667;
+    transition: .4s;
+}
+
+.menu li a:hover::after{
+    width: 100%;
 }
 
 .programming{
@@ -101,9 +117,9 @@ header nav {
     top: 0;
     left: 0;
     margin: 0 auto;
-    margin-left: -1%;
-    width: 102%;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
     z-index: -1;
     position: absolute;
 }
@@ -117,11 +133,23 @@ header nav {
 }
 
 .menu_pres h4{
-    font-size: 2rem;
+    font-size: max(2vw,18px);
+    text-align: center;
+    transition: .2s;
 }
 
 .menu_pres h1{
-    font-size: 7rem;  
+    font-size: max(5vw,38px);
+    text-align: center;
+    transition: .2s;
+}
+
+.menu_pres h1:hover{
+    font-size: max(5.1vw,42px);  
+}
+
+.menu_pres h4:hover{
+    font-size: max(2.05vw,19px);
 }
 
 #anim1{
@@ -182,12 +210,11 @@ header nav {
 /* ---------------------------------------- ABOUT ME -- */
 
 .about-me-section{
-    width: 100%;
     height: 100vh;
     background-image: url(../images/fond-pres.png);
     background-position: center;
-    background-size: 100% 100%;
     background-repeat: no-repeat;
+    pointer-events: none;
 }
 
 .about-me{
@@ -195,6 +222,7 @@ header nav {
     height: 100vh;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     margin: auto;
 }
@@ -202,11 +230,12 @@ header nav {
 .about-me span{
     width: 30vw;
     padding-right: 25px;
+    min-width: 350px;
+    margin: auto;
 }
 
 .about-me span img{
     width: 100%;
-    /* border-radius: 50%; */
 }
 
 .about-me-pres{
@@ -214,14 +243,16 @@ header nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    margin: auto;
     width: 30vw;
-    height: 500px;
+    min-width: 350px;
+    height: max(5vh,500px);
 }
 
 .about-me-pres h2{
-    font-size: 3rem;
+    font-size: max(3vw,50px);
     color: #181818;
-    
+    text-align: center;
 }
 
 .about-me-pres p{
@@ -256,22 +287,23 @@ header nav {
 .buttoncv{
     padding: 20px 35px;
     cursor: pointer;
-    background: linear-gradient(345deg, #d8816f,#fcb667);
+    background: linear-gradient(345deg, #fb8423,#fcb667);
     border: 0;
     color: #f1f1f1;
     position: relative;
     transition: all .1s;
     overflow: hidden;
     border-radius: 30px;
-    box-shadow: 0px -0px 0px 0px #d8816f, 0px 0px 0px 0px #fcb667;
+    box-shadow: 0px -0px 0px 0px #FB9623, 0px 0px 0px 0px #fcb667;
     font-size: 1rem;
     width: 210px;
     height: 65px;
+    pointer-events: all;
 }
 
 .buttoncv::after{
     content: "";
-    background: linear-gradient(225deg,#d8816f,#fcb667);
+    background: linear-gradient(225deg,#FB9623,#fcb667);
     z-index: -1;
     transition: all .5s;
     
@@ -279,7 +311,7 @@ header nav {
 
 .buttoncv:hover {
     transform: translate(0,-6px);
-    box-shadow: 5px -5px 20px 0px #d8816f, -5px 5px 20px 0px #fcb667;
+    box-shadow: 5px -5px 20px 0px #FB9623, -5px 5px 20px 0px #fcb667;
 }
 
 
@@ -290,6 +322,9 @@ header nav {
     width: 100%;
     height: 100vh;
     background: #242424;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .parcours{
@@ -305,23 +340,24 @@ header nav {
 
 
 .parcours h1{
-    font-size: 3rem;
+    font-size: max(3vw,50px);
     color: #f1f1f1;
-    flex: 1;
+    margin-bottom: 5vh;
 }
 
 .grid_parcours{
-    display: grid;
-    flex: 6;
-    grid-template-areas:"a b";
-    gap: 50px;
+    display: flex;
+    width: 70vw;
     align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .grid_parcours_case1{
-    width: 35vw;
-    height: 45vh;
-    grid-area: a;
+    width: 45%;
+    min-width: 300px;
+    height: 40vh;
+
     border-radius: 5px;
     transition: 0.5s;
     position: relative;
@@ -340,17 +376,19 @@ header nav {
     background-size: cover;
     transform: translateX(0);
     transition: transform 1s;
+    pointer-events: none;
 }
 
 .case1_img h1{
     color: #f1f1f1;
     text-align: center;
     opacity: .9;
+    font-size: max(3vw,45px);
 }
 
 .case1_blanc{
-    width: 35vw;
-    height: 45vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     transform: translateX(100%);
@@ -364,11 +402,13 @@ header nav {
 }
 
 .case1_blanc h3{
-    color: black;
+    color: #181818;
+    font-size: max(1.5vw,25px);
 }
 
 .case1_blanc p{
-    color: black;
+    color: #181818;
+    font-size: max(1.2vw,16px);
 }
 
 .hover1 .case1_blanc{
@@ -381,9 +421,10 @@ header nav {
 
 .grid_parcours_case2{
     background: #f1f1f1;
-    width: 35vw;
-    height: 45vh;
-    grid-area: b;
+    width: 45%;
+    min-width: 300px;
+    height: 40vh;
+
     border-radius: 5px;
     position: relative;
     overflow: hidden;
@@ -401,17 +442,19 @@ header nav {
     background-size: cover;
     transform: translateX(0);
     transition: transform 1s;
+    pointer-events: none;
 }
 
 .case2_img h1{
     color: #f1f1f1;
     text-align: center;
     opacity: .9;
+    font-size: max(3vw,45px);
 }
 
 .case2_blanc{
-    width: 35vw;
-    height: 45vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     transform: translateX(100%);
@@ -425,11 +468,13 @@ header nav {
 }
 
 .case2_blanc h3{
-    color: black;
+    color: #181818;
+    font-size: max(1.5vw,25px);
 }
 
 .case2_blanc p{
-    color: black;
+    color: #181818;
+    font-size: max(1.2vw,16px);
 }
 
 .hover2 .case2_blanc{
@@ -440,7 +485,39 @@ header nav {
     transform: translateX(-100%);
 }
 
+/* -------------------------------------------------- SKILLS -- */
+.skills-section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
 
+.top-skills-image{
+    width: 100%;
+}
+
+.skills{
+    padding-top: 20vh;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.skills > h1{
+    font-size: 3rem;
+    text-align: center;
+    color: #181818;
+}
+
+.carousel-skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -462,7 +539,7 @@ header nav {
 
 /*
 //
-// --------------------------- RESPPONSIVE --- //
+// --------------------------- RESPONSIVE --- //
 //
 */
 
@@ -472,7 +549,8 @@ header nav {
         display: inline-block;
         font-size: 1.5rem;
         cursor: pointer;
-        position: relative;
+        position: absolute;
+        left: 90%;
         z-index: 101;
     }
 
@@ -501,8 +579,7 @@ header nav {
         display: block;
         z-index: 101;
         position: fixed;
-        top: 2vh;
-        right: 2vw;
+        margin-top: -2%;
     }
 
     .open .logo{
@@ -535,7 +612,7 @@ header nav {
 
     .menu li{
         margin: 15px 0;
-        font-size: 2rem;
+        font-size: max(4vw,20px);
     }
 }
 
@@ -559,6 +636,16 @@ header nav {
 
     .about-me{
         flex-wrap: wrap;
+    }
+
+    .programming img{
+        height: 100%;
+        width: auto;
+    }
+
+    .top-skills-image{
+        height: 45%;
+        width: auto;
     }
 }
 
