@@ -263,7 +263,7 @@ header nav {
     height: 100vh;
     background-image: url(../images/fond-pres.png);
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     pointer-events: none;
 }
@@ -672,7 +672,7 @@ header nav {
 	height: 5px;
 	background-color: #212121;
 	border-radius: 40px;
-	margin: 10vh 0;
+	margin: 10vh 0 0 0;
 }
 
 
